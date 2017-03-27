@@ -3,16 +3,18 @@
 {% block body %}
   <div id="page-wrapper">
     <div class="container-fluid">
-    <h1 class="page-header">
-       - Items
-    </h1>
+    {% for ambito in ambitos %}
+        <h1 class="page-header">
+          {{ambito.NombreAmbito}} - Items
+        </h1>
+    {% endfor %}
       <div class="table-responsive" style="margin: 90px 0px 0px 50px;">
         <table>
           <tbody>
             {% for item in items %}
               <tr>
                 <td>
-                  <button type="button" class="btn btn-lg btn-info" style="margin-bottom: 40px;">{{item.NombreItem}}.{{item.NombreAmbito}}</button>
+                  <button type="button" class="btn btn-lg btn-info" style="margin-bottom: 40px;">{{item.NombreItem}}</button>
                 </td>
               </tr>
             {% endfor %}
