@@ -17,9 +17,9 @@ class IndicadorController extends Controller
    */
   public function MostrarIndicadores($id)
   {
-    $indicadores = $this->getDoctrine()->getManager()->getConnection()->prepare("Select Descripcion from indicadores i,items m where i.id_item_id=m.id and id_item_id=".$id);
+    $indicadores = $this->getDoctrine()->getManager()->getConnection()->prepare("Select Descripcion from indicadores i,items m,ambitos a where i.id_item_id=m.id and m.id_ambito_id=a.id and id_item_id=".$id);
     $indicadores->execute();
-    $items = $this->getDoctrine()->getManager()->getConnection()->prepare("Select NombreItem from items m, indicadores i where i.id_item_id=m.id and id_item_id=".$id." LIMIT 1");
+    $items = $this->getDoctrine()->getManager()->getConnection()->prepare("Select m.NombreItem, a.NombreAmbito, a.id from items m, indicadores i,ambitos a where i.id_item_id=m.id and m.id_ambito_id=a.id and id_item_id=".$id." LIMIT 1");
     $items->execute();
       //$item = $this->getDoctrine()
         //->getRepository('AppBundle:Items')

@@ -17,9 +17,9 @@ class ItemController extends Controller
    */
   public function MostrarItems($id)
   {
-    $items = $this->getDoctrine()->getManager()->getConnection()->prepare("Select * from items i,ambitos a where i.id_ambito_id=a.id and id_ambito_id=".$id);
+    $items = $this->getDoctrine()->getManager()->getConnection()->prepare("Select i.NombreItem,i.id from items i,ambitos a where i.id_ambito_id=a.id and id_ambito_id=".$id);
     $items->execute();
-    $ambito = $this->getDoctrine()->getManager()->getConnection()->prepare("Select NombreAmbito from ambitos a, items i where i.id_ambito_id=a.id and id_ambito_id=".$id." LIMIT 1");
+    $ambito = $this->getDoctrine()->getManager()->getConnection()->prepare("Select NombreAmbito, NombreItem from ambitos a, items i where i.id_ambito_id=a.id and id_ambito_id=".$id." LIMIT 1");
     $ambito->execute();
       //$item = $this->getDoctrine()
         //->getRepository('AppBundle:Items')

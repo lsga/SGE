@@ -7,6 +7,14 @@
         <h1 class="page-header">
           {{ambito.NombreAmbito}} - Items
         </h1>
+        <ol class="breadcrumb">
+            <li>
+              <a href="../ambitos">{{ambito.NombreAmbito}}</a>
+            </li>
+            <li class="active">
+              Items
+            </li>
+        </ol>
     {% endfor %}
       <div class="table-responsive" style="margin: 90px 0px 0px 50px;">
         <table style="margin:0px 1000px 0px 0px; width:800px;">
@@ -14,7 +22,7 @@
             {% for item in items %}
               <tr>
                 <td>
-                  <a href="../app_dev.php/indicadores/{{item.id}}"><button type="button" class="btn btn-lg btn-info" style="margin-bottom: 40px;">{{item.NombreItem}}</button></a>
+                  <a href="../indicadores/{{item.id}}"><button type="button" class="btn btn-lg btn-info" style="margin-bottom: 40px;">{{item.NombreItem}}</button></a>
                 </td>
               </tr>
               <tr>

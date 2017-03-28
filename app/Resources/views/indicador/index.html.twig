@@ -7,6 +7,17 @@
         <h1 class="page-header">
           {{item.NombreItem}} - Indicadores
         </h1>
+        <ol class="breadcrumb">
+            <li>
+              <a href="../ambitos">{{item.NombreAmbito}}</a>
+            </li>
+            <li>
+              <a href="../items/{{item.id}}">{{item.NombreItem}}</a>
+            </li>
+            <li class="active">
+            Indicadores
+            </li>
+        </ol>
     {% endfor %}
       <div class="table-responsive" style="margin: 90px 0px 0px 50px;">
         <table style="margin:0px 1000px 0px 0px; width:800px;">
