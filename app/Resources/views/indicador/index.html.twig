@@ -3,26 +3,18 @@
 {% block body %}
   <div id="page-wrapper">
     <div class="container-fluid">
-    {% for ambito in ambitos %}
+    {% for item in items %}
         <h1 class="page-header">
-          {{ambito.NombreAmbito}} - Items
+          {{item.NombreItem}} - Indicadores
         </h1>
     {% endfor %}
       <div class="table-responsive" style="margin: 90px 0px 0px 50px;">
         <table style="margin:0px 1000px 0px 0px; width:800px;">
           <tbody>
-            {% for item in items %}
+            {% for indicador in indicadores %}
               <tr>
                 <td>
-                  <a href="../app_dev.php/indicadores/{{item.id}}"><button type="button" class="btn btn-lg btn-info" style="margin-bottom: 40px;">{{item.NombreItem}}</button></a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="progress" style="width:40%;float:right;margin:-75px 70px 0px 0px;">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span class="sr-only">0% Complete (success)</span>
-                    </div>
-                  </div>
+                  <button type="button" class="btn btn-lg btn-info" style="margin-bottom: 40px;">Indicador {{indicador.Descripcion}}</button>
                 </td>
               </tr>
             {% endfor %}
