@@ -20,12 +20,18 @@
         </ol>
     {% endfor %}
       <div class="table-responsive" style="margin: 90px 0px 0px 50px;">
-        <table style="margin:0px 1000px 0px 0px; width:800px;">
+        <table style="width:25%">
           <tbody>
             {% for indicador in indicadores %}
               <tr>
                 <td>
                   <button type="button" class="btn btn-lg btn-info" style="margin-bottom: 40px;">Indicador {{indicador.Descripcion}}</button>
+                </td>
+                <td>
+                  <i class="fa fa-fw fa-file" style="margin-bottom: 37px;"></i>
+                </td>
+                <td>
+                  <i class="fa fa-fw fa-desktop" style="margin-bottom: 37px;"></i>
                 </td>
               </tr>
             {% endfor %}
