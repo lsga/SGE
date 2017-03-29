@@ -11,6 +11,7 @@
       {% block stylesheets %}
       <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
       <link rel="stylesheet" href="{{ asset('css/sb-admin.css') }}" />
+      <link rel="stylesheet" href="{{ asset('css/paginaprincipal.css') }}" />
       <link rel="stylesheet" href="{{ asset('css/plugins/morris.css') }}" />
       <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.min.css') }}" />
       {% endblock %}
@@ -174,6 +175,15 @@
             <!-- /.navbar-collapse -->
         </nav>
         {% block body %}
+        <div id="page-wrapper">
+          <div class="container-fluid">
+            <div class="contenido">
+              <button class="buttonprincipal" style="vertical-align:middle"><span>INGRESAR A LA PLATAFORMA DE AUTOEVALUACION</span></button>
+              <button class="buttonprincipal" style="vertical-align:middle"><span>VER RESUMEN DE AUTOEVALUACION</span></button>
+              <button class="buttonprincipal" style="vertical-align:middle"><span>VER SU INFORME FINAL</span></button>
+            </div>
+          </div>
+        </div>
         {% endblock %}
         {% block javascripts %}
           <script src="{{ asset('js/jquery.js') }}"></script>
