@@ -29,7 +29,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../app_dev.php/ambitos">SB Admin</a>
+                <a class="navbar-brand" href="../app_dev.php/home">SB Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -114,7 +114,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{user.Nombre}} {{user.Apellido}} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
@@ -136,7 +136,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="../app_dev.php/home"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="../app_dev.php/dashboard"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="../app_dev.php/chart"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
@@ -177,10 +177,13 @@
         {% block body %}
         <div id="page-wrapper">
           <div class="container-fluid">
+            <h1 class="page-header">
+                Sistema de Calidad de Gestión Escolar
+            </h1>
             <div class="contenido">
-              <button class="buttonprincipal" style="vertical-align:middle"><span>INGRESAR A LA PLATAFORMA DE AUTOEVALUACION</span></button>
-              <button class="buttonprincipal" style="vertical-align:middle"><span>VER RESUMEN DE AUTOEVALUACION</span></button>
-              <button class="buttonprincipal" style="vertical-align:middle"><span>VER SU INFORME FINAL</span></button>
+              <a href="../app_dev.php/ambitos"><button class="buttonprincipal btn-info" style="vertical-align:middle"><span>INGRESAR A LA PLATAFORMA DE AUTOEVALUACION</span></button></a>
+              <button class="buttonprincipal btn-info" style="vertical-align:middle"><span>VER RESUMEN DE AUTOEVALUACION</span></button>
+              <button class="buttonprincipal btn-info" style="vertical-align:middle"><span>VER SU INFORME FINAL</span></button>
             </div>
           </div>
         </div>
