@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/home", name="homepage")
+     * @Route("/dashboard", name="homepage")
      */
     public function indexAction(Request $request)
     {
