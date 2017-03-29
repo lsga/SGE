@@ -1,0 +1,20 @@
+{% extends 'principal/principal.html.twig' %}
+
+{% block body %}
+  <div id="page-wrapper">
+    <div class="container-fluid">
+      <h1 class="page-header">
+          {{usuario.Nombre}} {{usuario.Apellido}}
+      </h1>
+      <hr>
+      <ul class="list-group">
+        <li class="list-group-item"> Nombre: {{usuario.Nombre}}</li>
+        <li class="list-group-item"> Apellido: {{usuario.Apellido}}</li>
+        <li class="list-group-item"> Cedula: {{usuario.Cedula}}</li>
+        <li class="list-group-item"> Email: {{usuario.Email}}</li>
+        <li class="list-group-item"> User: {{usuario.User}}</li>
+      </ul>
+    </div>
+    <a class="btn btn-default" href="../../home"> Regresar</a>
+  </div>
+{% endblock %}

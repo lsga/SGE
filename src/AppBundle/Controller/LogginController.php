@@ -16,7 +16,8 @@ class LogginController extends Controller
         $pass=$request->get('contraseña');
         $us = $repository->findOneBy(array('user'=>$usuario, 'password'=>$pass));
         if ($us) {
-          return $this->render('principal/principal.html.twig', array('user' =>$us));
+          return $this->render('principal/principal.html.twig',array(
+            'user' => $us));
         }else {
             return $this->render('base.html.twig');
           }
