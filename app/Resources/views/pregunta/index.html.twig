@@ -3,8 +3,18 @@
 {% block body %}
   <div id="page-wrapper">
     <div class="container-fluid">
+    {% for indicador in indicadores %}
+    <h1 class="page-header">
+      {{indicador.NombreItem}}
+    </h1>
+    <h2>
+      {{indicador.Descripcion}}
+    </h2>
+    {% endfor %}
       <form>
-        
+        {% for resp in respuesta %}
+          <input type="radio" name="gender" value="male"> {{resp.Descripcion}}<br>
+        {% endfor %}
       </form>
     </div>
   </div>

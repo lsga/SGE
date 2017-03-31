@@ -25,7 +25,7 @@
             {% for indicador in indicadores %}
               <tr>
                 <td>
-                  <button type="button" class="btn btn-lg btn-info" style="margin-bottom: 40px;">Indicador {{indicador.Descripcion}}</button>
+                  <a href="../respuesta/{{indicador.id}}"><button type="button" class="btn btn-lg btn-info" style="margin-bottom: 40px;">Indicador {{indicador.Descripcion}}</button>
                 </td>
                 <td>
                   <i class="fa fa-fw fa-file" style="margin-bottom: 37px;"></i>
