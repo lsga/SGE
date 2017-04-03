@@ -20,6 +20,33 @@
               <input type="radio" name="respuesta" id="respuesta" value="{{resp.Descripcion}}"> {{resp.Descripcion}}<br>
           {%- endblock radio_widget -%}
         {% endfor %}
+        <br>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Evidencia</th>
+                    <th>Descripcion Evidencia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="width:50%;">
+                      <p class="help-block" style="margin-bottom:-17px;">Link GoogleDrive</p><br>
+                      <input class="form-control">
+                      <p class="help-block" style="margin-bottom:-17px;">O suba su evidencia</p><br>
+                      <input type="file">
+                    </td>
+                    <td>
+                      <textarea class="form-control" rows="3"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Observaciones</b></p>
+        <textarea class="form-control" rows="3"></textarea><br>
+        <p class="help-block"><b>Comentarios del Facilitador</b></p>
+        <textarea class="form-control" rows="3" readonly></textarea><br>
+        <button type="button" class="btn btn-success">Responder</button>
       </form>
     </div>
   </div>
