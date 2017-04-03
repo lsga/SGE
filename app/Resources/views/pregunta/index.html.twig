@@ -16,9 +16,9 @@
     {% endfor %}
       <form>
         {% for resp in respuesta %}
-        {%- block radio_widget -%}
-            <input type="radio" name="respuesta" id="respuesta" value="{{resp.Descripcion}}"> {{resp.Descripcion}}<br>
-        {%- endblock radio_widget -%}
+          {%- block radio_widget -%}
+              <input type="radio" name="respuesta" id="respuesta" value="{{resp.Descripcion}}"> {{resp.Descripcion}}<br>
+          {%- endblock radio_widget -%}
         {% endfor %}
       </form>
     </div>
