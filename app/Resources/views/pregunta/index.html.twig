@@ -3,17 +3,22 @@
 {% block body %}
   <div id="page-wrapper">
     <div class="container-fluid">
-    {% for indicador in indicadores %}
+    {% for preg in pregunta %}
     <h1 class="page-header">
-      {{indicador.NombreItem}}
+      {{preg.NombreItem}}
     </h1>
     <h2>
-      {{indicador.Descripcion}}
+      Indicador {{preg.Descripcion}}
     </h2>
+    <h4>
+      {{preg.NombrePregunta}}
+    </h4>
     {% endfor %}
       <form>
         {% for resp in respuesta %}
-          <input type="radio" name="gender" value="male"> {{resp.Descripcion}}<br>
+        {%- block radio_widget -%}
+            <input type="radio" name="respuesta" id="respuesta" value="{{resp.Descripcion}}"> {{resp.Descripcion}}<br>
+        {%- endblock radio_widget -%}
         {% endfor %}
       </form>
     </div>

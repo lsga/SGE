@@ -118,7 +118,7 @@ class Respuesta
     /**
      * Get idIndicador
      *
-     * @return AppBundle\Entity\Ambitos
+     * @return AppBundle\Entity\Indicadores
      */
     public function getIdIndicador()
     {
