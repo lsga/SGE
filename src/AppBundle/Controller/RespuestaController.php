@@ -14,7 +14,7 @@ class RespuestaController extends Controller
   /**
    * @Route("/respuesta/{id}", name="Respuesta")
    */
-  public function ResponderIndicador($id)
+  public function MostrarElementos($id)
   {
     $respuestas = $this->getDoctrine()->getManager()->getConnection()->prepare("Select r.Descripcion from indicadores i,items m,ambitos a, respuesta r where i.id_item_id=m.id and m.id_ambito_id=a.id and r.id_indicador_id=i.id and r.id_indicador_id=".$id);
     $respuestas->execute();
