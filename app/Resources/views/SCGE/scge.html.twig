@@ -1,0 +1,29 @@
+{% extends 'principal/principal.html.twig' %}
+
+{% block body %}
+  <div id="page-wrapper">
+    <div class="container-fluid">
+      <div class="contenido">
+        <h1 class="page-header">
+          Sistema de Control Gestión Escolar
+        </h1>
+        <a href="../app_dev.php/ambitos"><button class="buttonprincipal btn-info" style="vertical-align:middle"><span>INGRESAR A LA PLATAFORMA DE AUTOEVALUACION</span></button></a>
+        <button class="buttonprincipal btn-info" style="vertical-align:middle"><span>VER RESUMEN DE AUTOEVALUACION</span></button>
+        <button class="buttonprincipal btn-info" style="vertical-align:middle"><span>VER SU INFORME FINAL</span></button>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  <script src="{{ asset('js/jquery.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('js/plugins/morris/raphael.min.js') }}"></script>
+  <script src="{{ asset('js/plugins/morris/morris.min.js') }}"></script>
+  <script src="{{ asset('js/plugins/morris/morris-data.js') }}"></script>
+  <script src="{{ asset('js/plugins/flot/jquery.flot.js') }}"></script>
+  <script src="{{ asset('js/plugins/flot/jquery.flot.tooltip.min.js') }}"></script>
+  <script src="{{ asset('js/plugins/flot/jquery.flot.resize.js') }}"></script>
+  <script src="{{ asset('js/plugins/flot/jquery.flot.pie.js') }}"></script>
+  <script src="{{ asset('js/plugins/flot/flot-data.js') }}"></script>
+{% endblock %}

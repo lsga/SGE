@@ -26,4 +26,26 @@ class RespuestaController extends Controller
       return $this->render('pregunta/index.html.twig', array(
         'respuesta' => $respuestas,'pregunta'=>$pregunta));
   }
+  /**
+   * @Route("/respuesta", name="IngresarDatos")
+   */
+  public function IngresarDatos(Request $request)
+  {
+    $em = $this->getDoctrine()->getManager();
+    $repository = $em->getRepository('AppBundle:Usuarios');
+    if($request->getMethod()=='POST'){
+      $usuario= $request->get('usuario');
+      $pass=$request->get('contraseña');
+      $us = $repository->findOneBy(array('user'=>$usuario, 'password'=>$pass));
+      if ($us) {
+        return $this->render('principal/principal.html.twig',array(
+          'user' => $us));
+      }else {
+          return $this->render('base.html.twig');
+        }
+    }
+    else {
+      return $this->render('base.html.twig');
+    }
+  }
 }

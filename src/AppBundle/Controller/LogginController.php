@@ -15,11 +15,11 @@ class LogginController extends Controller
         $usuario= $request->get('usuario');
         $pass=$request->get('contraseña');
         $us = $repository->findOneBy(array('user'=>$usuario, 'password'=>$pass));
-        if ($us) {
+        if ($us && $us->getId()==1) {
           return $this->render('principal/principal.html.twig',array(
             'user' => $us));
-        }else {
-            return $this->render('base.html.twig');
+        }else if($us && $us->getId()==2){
+            return $this->render('principal/coordinador.html.twig');
           }
       }
       else {
@@ -27,9 +27,9 @@ class LogginController extends Controller
       }
     }
     /**
-     * @Route("/home", name="Recargar")
+     * @Route("/scge", name="SCGE")
      */
-    public function RecargarAction(Request $request){
-      return $this->render('principal/principal.html.twig');
+    public function ScgeAction(Request $request){
+      return $this->render('SCGE/scge.html.twig');
     }
 }
