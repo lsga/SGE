@@ -20,6 +20,8 @@ class LogginController extends Controller
             'user' => $us));
         }else if($us && $us->getId()==2){
             return $this->render('principal/coordinador.html.twig');
+          }else {
+            return $this->render('base.html.twig');
           }
       }
       else {
