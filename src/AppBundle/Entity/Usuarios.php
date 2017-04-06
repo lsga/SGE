@@ -64,7 +64,7 @@ class Usuarios
     private $password;
 
     /**
-     * @var string
+     * @var int
      *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Rol", cascade={"persist"})
      */
@@ -232,7 +232,7 @@ class Usuarios
      *
      * @return Usuarios
      */
-    public function setIdRol(AppBundle\Entity\Rol $idRol = null)
+    public function setIdRol(AppBundle\Entity\Rol $idRol)
     {
         $this->idRol = $idRol;
 
